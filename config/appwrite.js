@@ -1,7 +1,7 @@
 import { Client, Databases, Account, Storage } from "node-appwrite";
 
 //Admin Clinet
-const createAdminClinet = async () => {
+const createAdminClient = async () => {
   const client = new Client()
     .setEndpoint(process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT)
     .setProject(process.env.NEXT_PUBLIC_APPWRITE_PROJECT)
@@ -19,7 +19,7 @@ const createAdminClinet = async () => {
         }
     }
 };
-const createSessionClinet = async (session) => {  const client = new Client()
+const createSessionClient = async (session) => {  const client = new Client()
     .setEndpoint(process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT)
     .setProject(process.env.NEXT_PUBLIC_APPWRITE_PROJECT)
   
@@ -35,4 +35,4 @@ if(session){
         }
     }};
 
-    export {createAdminClinet, createSessionClinet}
+    export {createAdminClient, createSessionClient}

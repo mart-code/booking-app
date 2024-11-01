@@ -1,5 +1,5 @@
 "use server";
-import { createAdminClinet } from "@/config/appwrite";
+import { createAdminClient } from "@/config/appwrite";
 import { cookies } from "next/headers";
 
 async function createSession(previousState, formData) {
@@ -13,7 +13,7 @@ async function createSession(previousState, formData) {
   }
 
   //Get Account instance
-  const { account } = await createAdminClinet();
+  const { account } = await createAdminClient();
 
   try {
     //Generate a Session

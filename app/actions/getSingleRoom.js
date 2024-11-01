@@ -4,7 +4,7 @@ import { createAdminClinet } from "@/config/appwrite";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-async function getSingleRoom() {
+async function getSingleRoom(id) {
   try {
     const { databases } = await createAdminClinet();
 
